@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<HouseFile xml:lang="en" uiUnits="Imperial">
+    <Version major="1" minor="3">
+        <Labels>
+            <English>v1.3</English>
+            <French>v1.3</French>
+        </Labels>
+    </Version>
+    <Application>
+        <Name>HOT2000</Name>
+        <Version major="11" minor="7" build="23">
+            <Labels>
+                <English>v11.7b23</English>
+                <French>v11.7b23</French>
+            </Labels>
+        </Version>
+    </Application>
+    <ProgramInformation mixed="false">
+        <Weather depthOfFrost="1.2192" heatingDegreeDay="3500" library="Wth110.dir">
+            <Region code="3">
+                <English>SASKATCHEWAN</English>
+                <French>SASKATCHEWAN</French>
+            </Region>
+            <Location code="106">
+                <English>MOOSE JAW</English>
+                <French>MOOSE JAW</French>
+            </Location>
+        </Weather>
+        <File evaluationDate="2020-03-09">
+            <Identification>ERS-EX-3351</Identification>
+            <PreviousFileId />
+            <EnrollmentId />
+            <Ownership code="2">
+                <English>Dwelling corporate</English>
+                <French>Logement corporatif</French>
+            </Ownership>
+            <TaxNumber />
+            <EnteredBy>Energy Advisor</EnteredBy>
+            <UserTelephone />
+            <UserExtension />
+            <CompanyTelephone />
+            <CompanyExtension />
+            <Company>Private</Company>
+            <BuilderName>S-1000</BuilderName>
+            <HomeownerAuthorizationId />
+        </File>
+        <Client>
+            <Name>
+                <First />
+                <Last />
+            </Name>
+            <Telephone />
+            <StreetAddress>
+                <Street />
+                <City />
+                <Province>SASKATCHEWAN</Province>
+                <PostalCode />
+            </StreetAddress>
+            <MailingAddress>
+                <Name />
+                <Street />
+                <City />
+                <Province />
+                <PostalCode />
+            </MailingAddress>
+        </Client>
+        <Justifications nameplateEfficiency="false" combustionTestEfficiency="false" heatingCorrection="false" achCorrection="false" twoBlowerDoors="false" over18Months="false">
+            <PossessionDate selected="false" />
+            <HeatingVolumeDecrease selected="false" />
+            <CorrectedInsulation>
+                <Ceilings selected="false" />
+                <Walls selected="false" />
+                <Basement selected="false" />
+            </CorrectedInsulation>
+            <Other selected="true">ESTAR QA-TA1534 25/10/2010 Added LB1 window, chgd ownership from private, chgd name, corr. P.C.</Other>
+            <EnergyStar code="0" />
+        </Justifications>
+    </ProgramInformation>
+    <House id="0">
+        <Labels>
+            <English>House</English>
+            <French xml:lang="fr">House</French>
+        </Labels>
+        <Specifications effectiveMassFraction="1" defaultRoofCavity="true" buildingType="House">
+            <HouseType code="1">
+                <English>Single Detached</English>
+                <French>Détaché</French>
+            </HouseType>
+            <PlanShape code="1">
+                <English>Rectangular</English>
+                <French>Rectangulaire</French>
+            </PlanShape>
+            <Storeys code="2">
+                <English>One and a half</English>
+                <French>Un étage et demi</French>
+            </Storeys>
+            <FacingDirection code="7">
+                <English>West</English>
+                <French>Ouest</French>
+            </FacingDirection>
+            <ThermalMass code="1">
+                <English>Light, wood frame</English>
+                <French>Légère, ossature de bois</French>
+            </ThermalMass>
+            <YearBuilt code="1" value="1915">
+                <English>User specified</English>
+                <French>Spécifié par l'util.</French>
+            </YearBuilt>
+            <WallColour code="10" value="0">
+                <English>Default</English>
+                <French>par défaut</French>
+            </WallColour>
+            <SoilCondition code="1">
+                <English>Normal conductivity (dry sand, loam, clay)</English>
+                <French>conductivité normale (sable sec, argile)</French>
+            </SoilCondition>
+            <RoofColour code="4" value="0.84">
+                <English>Medium brown</English>
+                <French>Brun moyen</French>
+            </RoofColour>
+            <WaterLevel code="2">
+                <English>Normal (7-10m/23-33ft)</English>
+                <French>Normal (7-10m/23-33pi)</French>
+            </WaterLevel>
+            <HeatedFloorArea aboveGrade="103.4" belowGrade="49.1" />
+        </Specifications>
+        <WindowTightness code="1" value="1.86">
+            <English>CSA - A1</English>
+            <French>CSA - A1</French>
+        </WindowTightness>
+        <Temperatures id="12">
+            <Label>Temperatures</Label>
+            <MainFloors daytimeHeatingSetPoint="21" nighttimeHeatingSetPoint="21" nighttimeSetbackDuration="8" coolingSetPoint="25">
+                <AllowableRise code="2">
+                    <English>Medium (2.8 C = 5 F)</English>
+                    <French>Moyenne (2.8 C = 5 F)</French>
+                </AllowableRise>
+            </MainFloors>
+            <Basement heated="true" cooled="false" separateThermostat="true" heatingSetPoint="20" basementUnit="false" />
+            <Equipment heatingSetPoint="22" coolingSetPoint="24" />
+            <Crawlspace heated="false" heatingSetPoint="15" />
+        </Temperatures>
+        <BaseLoads basementFractionOfInternalGains="0.15" commonSpaceElectricalConsumption="0" id="13">
+            <Label>Base Loads</Label>
+            <Occupancy isOccupied="true">
+                <Adults occupants="2" atHome="50" />
+                <Children occupants="2" atHome="50" />
+                <Infants occupants="0" atHome="0" />
+            </Occupancy>
+            <Summary isSpecified="true" electricalAppliances="14" lighting="3" otherElectric="3" exteriorUse="4" hotWaterLoad="224.9857" />
+            <AdvancedUserSpecified hotWaterTemperature="55">
+                <DryerLocation code="8">Base - B</DryerLocation>
+            </AdvancedUserSpecified>
+        </BaseLoads>
+        <Generation solarReady="false" id="17">
+            <Label>Generation</Label>
+        </Generation>
+        <NaturalAirInfiltration id="8">
+            <Label>Natural Air Infiltration</Label>
+            <Specifications>
+                <House volume="381.1165">
+                    <AirTightnessTest code="x">
+                        <English>Blower door test values</English>
+                        <French>Valeurs d'essai de dépressurisation</French>
+                    </AirTightnessTest>
+                </House>
+                <BlowerTest airChangeRate="10.504" leakageArea="1386.0391" isCgsbTest="false" isCalculated="true" />
+                <BuildingSite highestCeiling="4.2367">
+                    <Terrain code="7">
+                        <English>Suburban, forest</English>
+                        <French>Banlieue, forêt</French>
+                    </Terrain>
+                </BuildingSite>
+                <LocalShielding>
+                    <Walls code="3">
+                        <English>Heavy</English>
+                        <French>Assez d'abri</French>
+                    </Walls>
+                    <Flue code="2">
+                        <English>Light</English>
+                        <French>Un peu d'abri</French>
+                    </Flue>
+                </LocalShielding>
+                <ExhaustDevicesTest result="0.5">
+                    <TestStatus code="3">
+                        <English>Test result</English>
+                        <French>Résultat du test</French>
+                    </TestStatus>
+                </ExhaustDevicesTest>
+            </Specifications>
+            <OtherFactors>
+                <WeatherStation anemometerHeight="10">
+                    <Terrain code="3">
+                        <English>Open flat terrain, grass</English>
+                        <French>Prairie à l'herbe</French>
+                    </Terrain>
+                </WeatherStation>
+                <LeakageFractions useDefaults="true" ceilings="0.2" walls="0.6" floors="0.2" />
+            </OtherFactors>
+            <AirLeakageTestData hasCgsbConditions="false" outsideTemperature="-3.8889" barometricPressure="101.3">
+                <TestType code="0">
+                    <English>1 blower - whole house</English>
+                    <French>1 infiltromètre - maison complète</French>
+                </TestType>
+                <TestData>
+                    <Test rank="1" equipment="1" insideTemperature="17.7778" zoneHeatedVolume="381.1165">
+                        <Manometer />
+                        <Pressure>
+                            <Static initial="0" final="0" />
+                        </Pressure>
+                        <FanType code="10">Minneapolis Model 3</FanType>
+                        <Data>
+                            <DataPoint rank="1" housePressure="-51" fanPressure="195">
+                                <FlowRanges code="1">A</FlowRanges>
+                            </DataPoint>
+                            <DataPoint rank="2" housePressure="-50" fanPressure="185">
+                                <FlowRanges code="1">A</FlowRanges>
+                            </DataPoint>
+                            <DataPoint rank="3" housePressure="-45" fanPressure="165">
+                                <FlowRanges code="1">A</FlowRanges>
+                            </DataPoint>
+                            <DataPoint rank="4" housePressure="-40" fanPressure="135">
+                                <FlowRanges code="1">A</FlowRanges>
+                            </DataPoint>
+                            <DataPoint rank="5" housePressure="-35" fanPressure="115">
+                                <FlowRanges code="1">A</FlowRanges>
+                            </DataPoint>
+                            <DataPoint rank="6" housePressure="-30" fanPressure="85">
+                                <FlowRanges code="1">A</FlowRanges>
+                            </DataPoint>
+                        </Data>
+                    </Test>
+                </TestData>
+            </AirLeakageTestData>
+        </NaturalAirInfiltration>
+        <Ventilation id="9">
+            <Label>Ventilation</Label>
+            <Rooms living="3" bedrooms="2" bathrooms="1" utility="1" otherHabitable="0">
+                <VentilationRate code="3">
+                    <English>10 L/s (21 cfm)</English>
+                    <French>10 L/s (21 pi³/min)</French>
+                </VentilationRate>
+                <DepressurizationLimit code="1" value="5">
+                    <English>5 Pa</English>
+                    <French>5 Pa</French>
+                </DepressurizationLimit>
+            </Rooms>
+            <Requirements ach="0" supply="0" exhaust="0">
+                <Use code="4">
+                    <English>Not applicable</English>
+                    <French>Sans objet</French>
+                </Use>
+            </Requirements>
+            <WholeHouse temperatureControlLower="-17.7778" temperatureControlUpper="-8.8889">
+                <AirDistributionType code="1">
+                    <English>Forced air heating ductwork</English>
+                    <French>Conduites à entraînement forcé pour l'air chauffé</French>
+                </AirDistributionType>
+                <AirDistributionFanPower code="1">
+                    <English>Default</English>
+                    <French>Par défaut</French>
+                </AirDistributionFanPower>
+                <OperationSchedule code="1" value="1440">
+                    <English>Continuous</English>
+                    <French>Continu</French>
+                </OperationSchedule>
+            </WholeHouse>
+            <WholeHouseVentilatorList />
+            <SupplementalVentilatorList>
+                <Dryer supplyFlowrate="0" exhaustFlowrate="2.3597" fanPower1="0" isDefaultFanpower="true" isEnergyStar="false" isHomeVentilatingInstituteCertified="false" isSupplemental="true">
+                    <EquipmentInformation />
+                    <VentilatorType code="5">
+                        <English>Dryer</English>
+                        <French>Sécheuse</French>
+                    </VentilatorType>
+                    <OperationSchedule code="1" value="1440">
+                        <English>Continuous</English>
+                        <French>Continu</French>
+                    </OperationSchedule>
+                    <Exhaust code="1">
+                        <English>Vented outdoors</English>
+                        <French>Évacuation extérieure</French>
+                    </Exhaust>
+                </Dryer>
+            </SupplementalVentilatorList>
+        </Ventilation>
+        <HeatingCooling id="11">
+            <Label>Heating/Cooling System</Label>
+            <CoolingSeason>
+                <Start code="5">May</Start>
+                <End code="10">October</End>
+                <Design code="7">July</Design>
+            </CoolingSeason>
+            <Type1>
+                <FansAndPump hasEnergyEfficientMotor="false">
+                    <Mode code="1">
+                        <English>Auto</English>
+                        <French>Auto</French>
+                    </Mode>
+                    <Power isCalculated="true" low="0" high="423.0073" />
+                </FansAndPump>
+                <Furnace>
+                    <EquipmentInformation energystar="true">
+                        <Manufacturer>Carrier</Manufacturer>
+                        <Model>58MCB080-12</Model>
+                    </EquipmentInformation>
+                    <Equipment isBiEnergy="false" switchoverTemperature="-17.7778">
+                        <EnergySource code="2">
+                            <English>Natural gas</English>
+                            <French>Gaz naturel</French>
+                        </EnergySource>
+                        <EquipmentType code="5">
+                            <English>Condensing</English>
+                            <French>Fournaise à condensation</French>
+                        </EquipmentType>
+                    </Equipment>
+                    <Specifications sizingFactor="1" efficiency="90.5" isSteadyState="false" pilotLight="0" flueDiameter="0">
+                        <OutputCapacity code="1" value="21.8045" uiUnits="btu/hr">
+                            <English>User specified</English>
+                            <French>Spécifié par l'util.</French>
+                        </OutputCapacity>
+                    </Specifications>
+                </Furnace>
+            </Type1>
+            <Type2 shadingInF280Cooling="AccountedFor" />
+            <MultipleSystems>
+                <Summary energySaverHeatingSystems="0" energySaverAirSourceHeatPump="0" woodAppliances="0" epaCsaHeatingSystems="0" />
+            </MultipleSystems>
+        </HeatingCooling>
+        <Components>
+            <Ceiling id="6">
+                <Label>Ceiling - Sloped</Label>
+                <Construction>
+                    <Type code="4">
+                        <English>Cathedral</English>
+                        <French>Cathédrale</French>
+                    </Type>
+                    <CeilingType idref="Code 4" rValue="1.578" nominalInsulation="1.5041">fRwd</CeilingType>
+                </Construction>
+                <Measurements length="15.24" area="23.2258" heelHeight="0.1524">
+                    <Slope code="7" value="0.583">
+                        <English>7 / 12</English>
+                        <French>7 / 12</French>
+                    </Slope>
+                </Measurements>
+            </Ceiling>
+            <Ceiling id="19">
+                <Label>Ceiling - flat</Label>
+                <Construction>
+                    <Type code="2">
+                        <English>Attic/gable</English>
+                        <French>Combles/pignon</French>
+                    </Type>
+                    <CeilingType idref="Code 3" rValue="8.8552" nominalInsulation="9.8118">ghsR56</CeilingType>
+                </Construction>
+                <Measurements length="15.24" area="34.8386" heelHeight="0.1524">
+                    <Slope code="7" value="0.583">
+                        <English>7 / 12</English>
+                        <French>7 / 12</French>
+                    </Slope>
+                </Measurements>
+            </Ceiling>
+            <Wall adjacentEnclosedSpace="false" id="2">
+                <Label>Gables</Label>
+                <Construction corners="4" intersections="0">
+                    <Type idref="Code 2" rValue="1.8104" nominalInsulation="1.5041">RWlp</Type>
+                    <LintelType idref="Code 5">DU</LintelType>
+                </Construction>
+                <Measurements height="2.2799" perimeter="14.0208" />
+                <FacingDirection code="1">
+                    <English>N/A</English>
+                    <French>S/O</French>
+                </FacingDirection>
+                <Components>
+                    <Window number="2" er="-1.945" shgc="0.681" frameHeight="32" frameAreaFraction="0.1267" edgeOfGlassFraction="0.2283" centreOfGlassFraction="0.645" adjacentEnclosedSpace="false" id="26">
+                        <Label>5F</Label>
+                        <Construction energyStar="false">
+                            <Type idref="Code 8" rValue="0.2582">M3</Type>
+                        </Construction>
+                        <Measurements height="1371.6" width="762.0001" headerHeight="0" overhangWidth="0">
+                            <Tilt code="1" value="90">
+                                <English>Vertical</English>
+                                <French>Verticale</French>
+                            </Tilt>
+                        </Measurements>
+                        <Shading curtain="1" shutterRValue="0" />
+                        <FacingDirection code="7">
+                            <English>West</English>
+                            <French>Ouest</French>
+                        </FacingDirection>
+                    </Window>
+                    <Window number="2" er="-1.945" shgc="0.681" frameHeight="32" frameAreaFraction="0.1267" edgeOfGlassFraction="0.2283" centreOfGlassFraction="0.645" adjacentEnclosedSpace="false" id="27">
+                        <Label>6B</Label>
+                        <Construction energyStar="false">
+                            <Type idref="Code 8" rValue="0.2582">M3</Type>
+                        </Construction>
+                        <Measurements height="1371.6" width="762.0001" headerHeight="0" overhangWidth="0">
+                            <Tilt code="1" value="90">
+                                <English>Vertical</English>
+                                <French>Verticale</French>
+                            </Tilt>
+                        </Measurements>
+                        <Shading curtain="1" shutterRValue="0" />
+                        <FacingDirection code="3">
+                            <English>East</English>
+                            <French>Est</French>
+                        </FacingDirection>
+                    </Window>
+                    <FloorHeader adjacentEnclosedSpace="false" id="15">
+                        <Label>Header - assumed</Label>
+                        <Construction>
+                            <Type idref="Code 12" rValue="0.59" nominalInsulation="0">hR0</Type>
+                        </Construction>
+                        <Measurements height="0.2286" perimeter="29.2608" />
+                        <FacingDirection code="1">
+                            <English>N/A</English>
+                            <French>S/O</French>
+                        </FacingDirection>
+                    </FloorHeader>
+                </Components>
+            </Wall>
+            <Wall adjacentEnclosedSpace="false" id="1">
+                <Label>Main - shave</Label>
+                <Construction corners="2" intersections="0">
+                    <Type idref="Code 2" rValue="1.8298" nominalInsulation="1.5041">RWlp</Type>
+                    <LintelType idref="Code 5">DU</LintelType>
+                </Construction>
+                <Measurements height="2.667" perimeter="14.6304" />
+                <FacingDirection code="1">
+                    <English>N/A</English>
+                    <French>S/O</French>
+                </FacingDirection>
+                <Components>
+                    <Door rValue="1.14" adjacentEnclosedSpace="false" id="21">
+                        <Label>Front</Label>
+                        <Construction energyStar="false">
+                            <Type code="5" value="1.14">
+                                <English>Steel Medium density spray foam core</English>
+                                <French>Acier / âme en mousse à vaporiser de densité moyenne</French>
+                            </Type>
+                        </Construction>
+                        <Measurements height="2.032" width="0.8128" />
+                    </Door>
+                    <Door rValue="0.39" adjacentEnclosedSpace="false" id="4">
+                        <Label>Right</Label>
+                        <Construction energyStar="false">
+                            <Type code="2" value="0.39">
+                                <English>Solid wood</English>
+                                <French>Bois massif</French>
+                            </Type>
+                        </Construction>
+                        <Measurements height="2.032" width="0.8128" />
+                    </Door>
+                    <Window number="2" er="14.2805" shgc="0.638" frameHeight="41" frameAreaFraction="0.1676" edgeOfGlassFraction="0.2311" centreOfGlassFraction="0.6013" adjacentEnclosedSpace="false" id="22">
+                        <Label>1R</Label>
+                        <Construction energyStar="false">
+                            <Type idref="Code 6" rValue="0.3609">W2</Type>
+                        </Construction>
+                        <Measurements height="1219.2" width="762.0001" headerHeight="0" overhangWidth="0">
+                            <Tilt code="1" value="90">
+                                <English>Vertical</English>
+                                <French>Verticale</French>
+                            </Tilt>
+                        </Measurements>
+                        <Shading curtain="1" shutterRValue="0" />
+                        <FacingDirection code="1">
+                            <English>South</English>
+                            <French>Sud</French>
+                        </FacingDirection>
+                    </Window>
+                    <Window number="1" er="8.8613" shgc="0.5966" frameHeight="96" frameAreaFraction="0.2263" edgeOfGlassFraction="0.1595" centreOfGlassFraction="0.6142" adjacentEnclosedSpace="false" id="23">
+                        <Label>2B-PD</Label>
+                        <Construction energyStar="false">
+                            <Type idref="Code 9" rValue="0.3536">pdV5</Type>
+                        </Construction>
+                        <Measurements height="2082.8003" width="1879.6" headerHeight="0" overhangWidth="0">
+                            <Tilt code="1" value="90">
+                                <English>Vertical</English>
+                                <French>Verticale</French>
+                            </Tilt>
+                        </Measurements>
+                        <Shading curtain="1" shutterRValue="0" />
+                        <FacingDirection code="3">
+                            <English>East</English>
+                            <French>Est</French>
+                        </FacingDirection>
+                    </Window>
+                    <Window number="2" er="31.4947" shgc="0.542" frameHeight="41" frameAreaFraction="0.1614" edgeOfGlassFraction="0.2262" centreOfGlassFraction="0.6124" adjacentEnclosedSpace="false" id="24">
+                        <Label>3F</Label>
+                        <Construction energyStar="false">
+                            <Type idref="Code 7" rValue="0.5653">V9</Type>
+                        </Construction>
+                        <Measurements height="1574.8" width="711.2001" headerHeight="0" overhangWidth="0">
+                            <Tilt code="1" value="90">
+                                <English>Vertical</English>
+                                <French>Verticale</French>
+                            </Tilt>
+                        </Measurements>
+                        <Shading curtain="1" shutterRValue="0" />
+                        <FacingDirection code="7">
+                            <English>West</English>
+                            <French>Ouest</French>
+                        </FacingDirection>
+                    </Window>
+                    <Window number="1" er="14.2805" shgc="0.6207" frameHeight="41" frameAreaFraction="0.1915" edgeOfGlassFraction="0.2589" centreOfGlassFraction="0.5496" adjacentEnclosedSpace="false" id="25">
+                        <Label>4R</Label>
+                        <Construction energyStar="false">
+                            <Type idref="Code 6" rValue="0.3617">W2</Type>
+                        </Construction>
+                        <Measurements height="660.4" width="1066.8" headerHeight="0" overhangWidth="0">
+                            <Tilt code="1" value="90">
+                                <English>Vertical</English>
+                                <French>Verticale</French>
+                            </Tilt>
+                        </Measurements>
+                        <Shading curtain="1" shutterRValue="0" />
+                        <FacingDirection code="1">
+                            <English>South</English>
+                            <French>Sud</French>
+                        </FacingDirection>
+                    </Window>
+                </Components>
+            </Wall>
+            <Wall adjacentEnclosedSpace="false" id="3">
+                <Label>Void</Label>
+                <Construction corners="2" intersections="0">
+                    <Type idref="Code 1" rValue="0.708" nominalInsulation="0">R0lp</Type>
+                    <LintelType idref="Code 5">DU</LintelType>
+                </Construction>
+                <Measurements height="2.667" perimeter="14.6304" />
+                <FacingDirection code="1">
+                    <English>N/A</English>
+                    <French>S/O</French>
+                </FacingDirection>
+            </Wall>
+            <Wall adjacentEnclosedSpace="false" id="20">
+                <Label>kneewalls</Label>
+                <Construction corners="4" intersections="0">
+                    <Type idref="Code 1" rValue="0.715" nominalInsulation="0">R0lp</Type>
+                    <LintelType idref="Code 5">DU</LintelType>
+                </Construction>
+                <Measurements height="1.524" perimeter="15.24" />
+                <FacingDirection code="1">
+                    <English>N/A</English>
+                    <French>S/O</French>
+                </FacingDirection>
+            </Wall>
+            <Basement isExposedSurface="true" exposedSurfacePerimeter="28.0416" id="7">
+                <Label>Base - B</Label>
+                <Configuration type="BCIN" subtype="1" overlap="0">BCIN_1</Configuration>
+                <OpeningUpstairs code="1" value="1.56">
+                    <English>Standard door - open</English>
+                    <French>Porte standard - ouverte</French>
+                </OpeningUpstairs>
+                <RoomType code="6">
+                    <English>Utility Room</English>
+                    <French>Pièce Utilitaire</French>
+                </RoomType>
+                <Floor>
+                    <Construction isBelowFrostline="true" hasIntegralFooting="false" heatedFloor="false">
+                        <FloorsAbove idref="Code 10" rValue="0.7288" nominalInsulation="0">flrR0</FloorsAbove>
+                    </Construction>
+                    <Measurements isRectangular="true" width="7.3152" length="6.7056" />
+                </Floor>
+                <Wall hasPonyWall="false">
+                    <Construction corners="4">
+                        <InteriorAddedInsulation idref="Code 11" nominalInsulation="0">
+                            <Description>noins</Description>
+                            <Composite>
+                                <Section rank="1" percentage="100" rsi="0" nominalRsi="0" />
+                            </Composite>
+                        </InteriorAddedInsulation>
+                    </Construction>
+                    <Measurements height="1.905" depth="1.2954" ponyWallHeight="0" />
+                </Wall>
+                <Components>
+                    <Window number="1" er="14.2805" shgc="0.576" frameHeight="41" frameAreaFraction="0.2529" edgeOfGlassFraction="0.3283" centreOfGlassFraction="0.4188" adjacentEnclosedSpace="false" id="28">
+                        <Label>LB1</Label>
+                        <Construction energyStar="false">
+                            <Type idref="Code 6" rValue="0.3639">W2</Type>
+                        </Construction>
+                        <Measurements height="457.2" width="914.4001" headerHeight="0" overhangWidth="0">
+                            <Tilt code="1" value="90">
+                                <English>Vertical</English>
+                                <French>Verticale</French>
+                            </Tilt>
+                        </Measurements>
+                        <Shading curtain="1" shutterRValue="0" />
+                        <FacingDirection code="5">
+                            <English>North</English>
+                            <French>Nord</French>
+                        </FacingDirection>
+                    </Window>
+                    <FloorHeader adjacentEnclosedSpace="false" id="14">
+                        <Label>Header - B</Label>
+                        <Construction>
+                            <Type idref="Code 12" rValue="0.59" nominalInsulation="0">hR0</Type>
+                        </Construction>
+                        <Measurements height="0.2286" perimeter="28.0416" />
+                        <FacingDirection code="1">
+                            <English>N/A</English>
+                            <French>S/O</French>
+                        </FacingDirection>
+                    </FloorHeader>
+                </Components>
+            </Basement>
+            <HotWater id="10">
+                <Label>Domestic Hot Water</Label>
+                <Primary hasDrainWaterHeatRecovery="false" insulatingBlanket="0" combinedFlue="false" flueDiameter="76.2" energyStar="false" ecoEnergy="false" userDefinedPilot="true" connectedUnitsDwhr="0" pilotEnergy="17.6996">
+                    <EquipmentInformation>
+                        <Manufacturer>10 yrs</Manufacturer>
+                    </EquipmentInformation>
+                    <EnergySource code="2">
+                        <English>Natural gas</English>
+                        <French>Gaz naturel</French>
+                    </EnergySource>
+                    <TankType code="3">
+                        <English>Conventional tank (pilot)</English>
+                        <French>Réservoir classique (veilleuse)</French>
+                    </TankType>
+                    <TankVolume code="3" value="151.4">
+                        <English>151.4 L, 33.3 Imp, 40 US gal</English>
+                        <French>151.4 L, 33.3 imp, 40 gal ÉU</French>
+                    </TankVolume>
+                    <EnergyFactor code="1" value="0.5543" inputCapacity="0" isUniform="false">
+                        <English>Use defaults</English>
+                        <French>Valeurs par défaut</French>
+                    </EnergyFactor>
+                    <TankLocation code="2">
+                        <English>Basement</English>
+                        <French>Sous-sol</French>
+                    </TankLocation>
+                </Primary>
+            </HotWater>
+        </Components>
+    </House>
+    <Codes>
+        <Wall>
+            <Favorite>
+                <Code id="Code 1" value="1201009121" nominalRValue="0">
+                    <Label>R0lp</Label>
+                    <Description></Description>
+                    <Layers>
+                        <StructureType code="2">
+                            <English>Wood frame</English>
+                            <French>Ossature de bois</French>
+                        </StructureType>
+                        <ComponentTypeSize code="0">
+                            <English>38x89 mm (2x4 in)</English>
+                            <French>38x89 (2x4)</French>
+                        </ComponentTypeSize>
+                        <Spacing code="1">
+                            <English>400 mm (16 in)</English>
+                            <French>400 mm (16 po)</French>
+                        </Spacing>
+                        <InsulationLayer1 code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InsulationLayer1>
+                        <InsulationLayer2 code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InsulationLayer2>
+                        <Interior code="9">
+                            <English>Lath &amp; plaster</English>
+                            <French>Plâtre sur lattis</French>
+                        </Interior>
+                        <Sheathing code="1">
+                            <English>Waferboard/OSB  9.5 mm (3/8 in)</English>
+                            <French>Panneau copeaux/OSB  9.5 mm (3/8 po)</French>
+                        </Sheathing>
+                        <Exterior code="2">
+                            <English>Hollow metal/vinyl cladding</English>
+                            <French>Revêt. en métal creux/vinyle</French>
+                        </Exterior>
+                        <StudsCornerIntersection code="1">
+                            <English>3 studs</English>
+                            <French>3 poteaux</French>
+                        </StudsCornerIntersection>
+                    </Layers>
+                </Code>
+                <Code id="Code 2" value="1201M09121" nominalRValue="1.5041">
+                    <Label>RWlp</Label>
+                    <Description></Description>
+                    <Layers>
+                        <StructureType code="2">
+                            <English>Wood frame</English>
+                            <French>Ossature de bois</French>
+                        </StructureType>
+                        <ComponentTypeSize code="0">
+                            <English>38x89 mm (2x4 in)</English>
+                            <French>38x89 (2x4)</French>
+                        </ComponentTypeSize>
+                        <Spacing code="1">
+                            <English>400 mm (16 in)</English>
+                            <French>400 mm (16 po)</French>
+                        </Spacing>
+                        <InsulationLayer1 code="M">
+                            <English> Wood shavings</English>
+                            <French>Copeaux de bois</French>
+                        </InsulationLayer1>
+                        <InsulationLayer2 code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InsulationLayer2>
+                        <Interior code="9">
+                            <English>Lath &amp; plaster</English>
+                            <French>Plâtre sur lattis</French>
+                        </Interior>
+                        <Sheathing code="1">
+                            <English>Waferboard/OSB  9.5 mm (3/8 in)</English>
+                            <French>Panneau copeaux/OSB  9.5 mm (3/8 po)</French>
+                        </Sheathing>
+                        <Exterior code="2">
+                            <English>Hollow metal/vinyl cladding</English>
+                            <French>Revêt. en métal creux/vinyle</French>
+                        </Exterior>
+                        <StudsCornerIntersection code="1">
+                            <English>3 studs</English>
+                            <French>3 poteaux</French>
+                        </StudsCornerIntersection>
+                    </Layers>
+                </Code>
+            </Favorite>
+        </Wall>
+        <Ceiling>
+            <Favorite>
+                <Code id="Code 3" value="2203791000" nominalRValue="9.8118">
+                    <Label>ghsR56</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <StructureType code="2">
+                            <English>Wood frame</English>
+                            <French>Ossature de bois</French>
+                        </StructureType>
+                        <ComponentTypeSize code="0">
+                            <English>38x89 mm (2x4 in)</English>
+                            <French>38x89 (2x4)</French>
+                        </ComponentTypeSize>
+                        <Spacing code="3">
+                            <English>600 mm (24 in)</English>
+                            <French>600 mm (24 po)</French>
+                        </Spacing>
+                        <InsulationLayer1 code="7">
+                            <English>RSI 4.9  (R 28) Blown cellulose</English>
+                            <French>RSI 4.9  (R 28) Cell. injecté</French>
+                        </InsulationLayer1>
+                        <InsulationLayer2 code="9">
+                            <English>Same as Insulation Layer 1</English>
+                            <French>Même que couche d'isolant 1</French>
+                        </InsulationLayer2>
+                        <Interior code="1">
+                            <English>12 mm (0.5 in) gypsum board</English>
+                            <French>12 mm (0.5 po) Plaque de plâtre (P de p)</French>
+                        </Interior>
+                    </Layers>
+                </Code>
+            </Favorite>
+        </Ceiling>
+        <CeilingFlat>
+            <Favorite>
+                <Code id="Code 4" value="2201M01000" nominalRValue="1.5041">
+                    <Label>fRwd</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <StructureType code="2">
+                            <English>Wood frame</English>
+                            <French>Ossature de bois</French>
+                        </StructureType>
+                        <ComponentTypeSize code="0">
+                            <English>38x89 mm (2x4 in)</English>
+                            <French>38x89 (2x4)</French>
+                        </ComponentTypeSize>
+                        <Spacing code="1">
+                            <English>400 mm (16 in)</English>
+                            <French>400 mm (16 po)</French>
+                        </Spacing>
+                        <InsulationLayer1 code="M">
+                            <English> Wood shavings</English>
+                            <French>Copeaux de bois</French>
+                        </InsulationLayer1>
+                        <InsulationLayer2 code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InsulationLayer2>
+                        <Interior code="1">
+                            <English>12 mm (0.5 in) gypsum board</English>
+                            <French>12 mm (0.5 po) Plaque de plâtre (P de p)</French>
+                        </Interior>
+                    </Layers>
+                </Code>
+            </Favorite>
+        </CeilingFlat>
+        <Lintel>
+            <Favorite>
+                <Code id="Code 5" value="100" nominalRValue="0">
+                    <Label>DU</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <Type code="1">
+                            <English>Double</English>
+                            <French>Double</French>
+                        </Type>
+                        <Material code="0">
+                            <English>Wood</English>
+                            <French>Bois</French>
+                        </Material>
+                        <Insulation code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </Insulation>
+                    </Layers>
+                </Code>
+            </Favorite>
+        </Lintel>
+        <Window>
+            <Favorite>
+                <Code id="Code 6" value="200202" nominalRValue="0">
+                    <Label>W2</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <GlazingTypes code="2">
+                            <English>Double/double with 1 coat</English>
+                            <French>Double/double, 1 couche</French>
+                        </GlazingTypes>
+                        <CoatingsTints code="0">
+                            <English>Clear</English>
+                            <French>Transparent</French>
+                        </CoatingsTints>
+                        <FillType code="0">
+                            <English>13 mm Air</English>
+                            <French>13 mm d'air</French>
+                        </FillType>
+                        <SpacerType code="2">
+                            <English>Insulating</English>
+                            <French>Isolant</French>
+                        </SpacerType>
+                        <Type code="0">
+                            <English>Picture</English>
+                            <French>Fixe</French>
+                        </Type>
+                        <FrameMaterial code="2">
+                            <English>Wood</English>
+                            <French>Bois</French>
+                        </FrameMaterial>
+                    </Layers>
+                </Code>
+                <Code id="Code 7" value="223204" nominalRValue="0">
+                    <Label>V9</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <GlazingTypes code="2">
+                            <English>Double/double with 1 coat</English>
+                            <French>Double/double, 1 couche</French>
+                        </GlazingTypes>
+                        <CoatingsTints code="2">
+                            <English>Low-E .10 (soft)</English>
+                            <French>Faible E .10 (Doux)</French>
+                        </CoatingsTints>
+                        <FillType code="3">
+                            <English>13 mm Argon</English>
+                            <French>13 mm d'argon</French>
+                        </FillType>
+                        <SpacerType code="2">
+                            <English>Insulating</English>
+                            <French>Isolant</French>
+                        </SpacerType>
+                        <Type code="0">
+                            <English>Picture</English>
+                            <French>Fixe</French>
+                        </Type>
+                        <FrameMaterial code="4">
+                            <English>Vinyl</English>
+                            <French>Vinyle</French>
+                        </FrameMaterial>
+                    </Layers>
+                </Code>
+                <Code id="Code 8" value="200000" nominalRValue="0">
+                    <Label>M3</Label>
+                    <Description></Description>
+                    <Layers>
+                        <GlazingTypes code="2">
+                            <English>Double/double with 1 coat</English>
+                            <French>Double/double, 1 couche</French>
+                        </GlazingTypes>
+                        <CoatingsTints code="0">
+                            <English>Clear</English>
+                            <French>Transparent</French>
+                        </CoatingsTints>
+                        <FillType code="0">
+                            <English>13 mm Air</English>
+                            <French>13 mm d'air</French>
+                        </FillType>
+                        <SpacerType code="0">
+                            <English>Metal</English>
+                            <French>Métal</French>
+                        </SpacerType>
+                        <Type code="0">
+                            <English>Picture</English>
+                            <French>Fixe</French>
+                        </Type>
+                        <FrameMaterial code="0">
+                            <English>Aluminum</English>
+                            <French>Aluminium</French>
+                        </FrameMaterial>
+                    </Layers>
+                </Code>
+                <Code id="Code 9" value="200245" nominalRValue="0">
+                    <Label>pdV5</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <GlazingTypes code="2">
+                            <English>Double/double with 1 coat</English>
+                            <French>Double/double, 1 couche</French>
+                        </GlazingTypes>
+                        <CoatingsTints code="0">
+                            <English>Clear</English>
+                            <French>Transparent</French>
+                        </CoatingsTints>
+                        <FillType code="0">
+                            <English>13 mm Air</English>
+                            <French>13 mm d'air</French>
+                        </FillType>
+                        <SpacerType code="2">
+                            <English>Insulating</English>
+                            <French>Isolant</French>
+                        </SpacerType>
+                        <Type code="4">
+                            <English>Patio door</English>
+                            <French>Porte patio</French>
+                        </Type>
+                        <FrameMaterial code="5">
+                            <English>Reinforced vinyl</English>
+                            <French>Vinyle renforcé</French>
+                        </FrameMaterial>
+                    </Layers>
+                </Code>
+            </Favorite>
+        </Window>
+        <FloorsAbove>
+            <Favorite>
+                <Code id="Code 10" value="4231001340" nominalRValue="0">
+                    <Label>flrR0</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <StructureType code="2">
+                            <English>Wood frame</English>
+                            <French>Ossature de bois</French>
+                        </StructureType>
+                        <ComponentTypeSize code="3">
+                            <English>38x235 mm (2x10 in)</English>
+                            <French>38x235 (2x10)</French>
+                        </ComponentTypeSize>
+                        <Spacing code="1">
+                            <English>400 mm (16 in)</English>
+                            <French>400 mm (16 po)</French>
+                        </Spacing>
+                        <InsulationLayer1 code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InsulationLayer1>
+                        <InsulationLayer2 code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InsulationLayer2>
+                        <Interior code="1">
+                            <English>12 mm (0.5 in) gypsum board</English>
+                            <French>12 mm (0.5 po) Plaque de plâtre (P de p)</French>
+                        </Interior>
+                        <Sheathing code="3">
+                            <English>Waferboard/OSB 15.9 mm (5/8 in)</English>
+                            <French>Panneau copeaux/OSB 15.9 mm (5/8 po)</French>
+                        </Sheathing>
+                        <Exterior code="4">
+                            <English>Tile-linoleum</English>
+                            <French>Carreau de linoléum</French>
+                        </Exterior>
+                        <DropFraming code="0">
+                            <English>No</English>
+                            <French>Non</French>
+                        </DropFraming>
+                    </Layers>
+                </Code>
+            </Favorite>
+        </FloorsAbove>
+        <BasementWall>
+            <Favorite>
+                <Code id="Code 11" value="000000" nominalRValue="0">
+                    <Label>noins</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <Framing code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </Framing>
+                        <ExtraInsulationLayer code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </ExtraInsulationLayer>
+                        <InteriorFinish code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InteriorFinish>
+                    </Layers>
+                </Code>
+            </Favorite>
+        </BasementWall>
+        <FloorHeader>
+            <Favorite>
+                <Code id="Code 12" value="1800000020" nominalRValue="0">
+                    <Label>hR0</Label>
+                    <Description>Your comment here</Description>
+                    <Layers>
+                        <StructureType code="8">
+                            <English>Floor header</English>
+                            <French>Solive de Rive</French>
+                        </StructureType>
+                        <InsulationLayer1 code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InsulationLayer1>
+                        <InsulationLayer2 code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </InsulationLayer2>
+                        <Sheathing code="0">
+                            <English>None</English>
+                            <French>Aucun</French>
+                        </Sheathing>
+                        <Exterior code="2">
+                            <English>Hollow metal/vinyl cladding</English>
+                            <French>Revêt. en métal creux/vinyle</French>
+                        </Exterior>
+                    </Layers>
+                </Code>
+            </Favorite>
+        </FloorHeader>
+    </Codes>
+    <FuelCosts includeCostCalculations="true" library="FuelLib.flc">
+        <Electricity>
+            <Fuel id="37">
+                <Label>20060505</Label>
+                <Comment>Rate as of May 5, 2005</Comment>
+                <Units code="1">
+                    <English>kWhr</English>
+                    <French>kWh</French>
+                </Units>
+                <Minimum units="0" charge="16.86" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.1052" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+            <Fuel id="32">
+                <Label>20051201</Label>
+                <Comment>Rate as of Sep 1, 2004 (cor)</Comment>
+                <Units code="1">
+                    <English>kWhr</English>
+                    <French>kWh</French>
+                </Units>
+                <Minimum units="0" charge="16.84" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.0978" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+            <Fuel id="39">
+                <Label>20070201</Label>
+                <Comment>Rate as of Feb 1, 2007</Comment>
+                <Units code="1">
+                    <English>kWhr</English>
+                    <French>kWh</French>
+                </Units>
+                <Minimum units="0" charge="17.91" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.1097" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+        </Electricity>
+        <NaturalGas>
+            <Fuel id="36">
+                <Label>20060505</Label>
+                <Comment>Rate as of May 5,2006</Comment>
+                <Units code="4">
+                    <English>m³</English>
+                    <French>m³</French>
+                </Units>
+                <Minimum units="0" charge="11.8" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.3676" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+            <Fuel id="33">
+                <Label>20051201</Label>
+                <Comment>Rate as of Nov 1, 2005</Comment>
+                <Units code="4">
+                    <English>m³</English>
+                    <French>m³</French>
+                </Units>
+                <Minimum units="0" charge="11.8" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.4113" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+            <Fuel id="40">
+                <Label>20070601</Label>
+                <Comment>Rate as of Jun 1, 2001</Comment>
+                <Units code="4">
+                    <English>m³</English>
+                    <French>m³</French>
+                </Units>
+                <Minimum units="0" charge="14.04" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.3812" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+        </NaturalGas>
+        <Oil>
+            <Fuel id="3">
+                <Label>$0.50/l</Label>
+                <Comment>$0.50/litre</Comment>
+                <Units code="2">
+                    <English>Litre</English>
+                    <French>Litre</French>
+                </Units>
+                <Minimum units="0" charge="0" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.5" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+            <Fuel id="27">
+                <Label>$0.85/l</Label>
+                <Comment>$0.85/litre</Comment>
+                <Units code="2">
+                    <English>Litre</English>
+                    <French>Litre</French>
+                </Units>
+                <Minimum units="0" charge="0" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.85" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+        </Oil>
+        <Propane>
+            <Fuel id="11">
+                <Label>$0.50/l</Label>
+                <Comment>$0.50/litre</Comment>
+                <Units code="2">
+                    <English>Litre</English>
+                    <French>Litre</French>
+                </Units>
+                <Minimum units="0" charge="0" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.5" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+            <Fuel id="18">
+                <Label>$0.65/l</Label>
+                <Comment>$0.65/litre</Comment>
+                <Units code="2">
+                    <English>Litre</English>
+                    <French>Litre</French>
+                </Units>
+                <Minimum units="0" charge="0" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.65" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+            <Fuel id="16">
+                <Label>$0.55/l</Label>
+                <Comment>$0.55/litre</Comment>
+                <Units code="2">
+                    <English>Litre</English>
+                    <French>Litre</French>
+                </Units>
+                <Minimum units="0" charge="0" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="0.55" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+        </Propane>
+        <Wood>
+            <Fuel id="5">
+                <Label>$55/c</Label>
+                <Comment>$55/cord</Comment>
+                <Units code="4">
+                    <English>Cords</English>
+                    <French>Cordes</French>
+                </Units>
+                <Minimum units="0" charge="0" />
+                <RateBlocks>
+                    <Block1 units="99999" costPerUnit="55" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+            <Fuel id="24">
+                <Label>$125/c</Label>
+                <Comment>$125/cord</Comment>
+                <Units code="4">
+                    <English>Cords</English>
+                    <French>Cordes</French>
+                </Units>
+                <Minimum units="0" charge="0" />
+                <RateBlocks>
+                    <Block1 units="9999" costPerUnit="125" />
+                    <Block2 units="0" costPerUnit="0" />
+                    <Block3 units="0" costPerUnit="0" />
+                    <Block4 units="0" costPerUnit="0" />
+                </RateBlocks>
+            </Fuel>
+        </Wood>
+    </FuelCosts>
+    <AllResults>
+        <Results sha256="321007EB5A684BCA7B5A1E7BD51CE1004009CD2E56B54D3BED896F52B6E410C0">
+            <Labels>
+                <English>House</English>
+                <French xml:lang="fr">House</French>
+            </Labels>
+            <Annual>
+                <Consumption total="212.132535076">
+                    <Electrical baseload="31.536000000" airConditioning="0.000000000" appliance="18.395985283" lighting="3.941996846" heatPump="0.000000000" spaceHeating="2.683018483" spaceCooling="0.000000000" ventilation="0.000000000" total="34.218992156">
+                        <HotWater dhw="0.000000000" primary="0.000000000" secondary="0.000000000" />
+                    </Electrical>
+                    <NaturalGas baseload="0.000000000" appliance="0.000000000" hotWater="29.604802448" spaceHeating="148.308325384" total="177.913123284" />
+                    <Oil baseload="0.000000000" hotWater="0.000000000" spaceHeating="0.000000000" total="0.000000000" />
+                    <Propane baseload="0.000000000" appliance="0.000000000" hotWater="0.000000000" spaceHeating="0.000000000" total="0.000000000" />
+                    <Wood baseload="0.000000000" hotWater="0.000000000" spaceHeating="0.000000000" total="0.000000000" />
+                    <SpaceHeating primary="148.308640625" secondary="0.000000000" total="150.991656250" />
+                    <HotWater primary="29.604867187" secondary="0.000000000" total="29.604867187" />
+                    <SupplementalHeating system1="0.000000000" system2="0.000000000" system3="0.000000000" system4="0.000000000" system5="0.000000000" />
+                </Consumption>
+                <HotWaterDemand base="16.754212891" primary="29.604867187" secondary="0.000000000" />
+                <Load basementHeating="0.000000000" basementCooling="0.000000000" grossHeating="190.132593750" auxiliaryEnergy="140983.046875000" />
+                <HeatLoss total="190.132571167" ceiling="8.262139648" mainWalls="66.973195312" windows="21.574240112" doors="3.112114990" exposedFloors="0.000000000" crawlspace="0.000000000" slab="0.000000000" basementBelowGradeWall="25.218996094" basementAboveGradeWall="26.815666016" basementFloorHeaders="2.026652588" ponyWall="0.000000000" floorsAboveBasement="5.438020996" airLeakageAndNaturalVentilation="36.149566406">
+                    <MainFloor door="3.112114990">
+                        <Windows south="3.8852" southEast="0" east="10.4947" northEast="0" north="0" northWest="0" west="6.6024" southWest="0" />
+                    </MainFloor>
+                    <Basement door="0.000000000">
+                        <Windows south="0" southEast="0" east="0" northEast="0" north="0.5919" northWest="0" west="0" southWest="0" />
+                    </Basement>
+                    <Crawlspace door="0.000000000">
+                        <Windows south="0" southEast="0" east="0" northEast="0" north="0" northWest="0" west="0" southWest="0" />
+                    </Crawlspace>
+                </HeatLoss>
+                <AirChangeRate natural="0.372380137" total="0.394669622" />
+                <UtilizedSolarGains value="17.049339844" />
+                <ActualFuelCosts electrical="1202.276733398" naturalGas="1896.910644531" oil="0.000000000" propane="0.000000000" wood="0.000000000" />
+            </Annual>
+            <Monthly>
+                <FractionOfTimeHeatingSystemNotOperating january="0.51401" february="0.58159" march="0.70875" april="0.83845" may="0.94045" june="0.98786" july="0.99652" august="0.99312" september="0.94199" october="0.84414" november="0.67725" december="0.54934" />
+                <SolarHotWaterEnergyContribution january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                <ElectricalConsumption>
+                    <ImsOrP9HeatingHours january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <Gross january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                </ElectricalConsumption>
+                <Gains>
+                    <UtilizedInternal january="2788.48904" february="2514.34142" march="2788.46158" april="2710.74157" may="2815.33157" june="2596.06724" july="2207.74575" august="2559.16837" september="2753.46654" october="2836.61752" november="2728.27586" december="2801.47660" />
+                    <UtilizedSolar january="1470.75564" february="1858.57122" march="2528.11681" april="2072.62436" may="1742.01769" june="756.76496" july="234.91615" august="547.03492" september="1604.06072" october="1656.81338" november="1355.04647" december="1222.61301" />
+                    <CrawlspaceSolar january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                </Gains>
+                <UtilizedAuxiliaryHeatRequired january="28933.11259" february="22499.27584" march="17336.33373" april="9307.29994" may="3544.97618" june="699.38414" july="207.38590" august="409.38708" september="3342.42229" october="9279.06112" november="18594.84094" december="26829.56942" />
+                <Temperatures>
+                    <CrawlSpace january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <Attic january="-11.32004" february="-6.67644" march="0.37458" april="9.91761" may="17.68562" june="22.87409" july="25.16804" august="23.47999" september="16.00812" october="8.38186" november="-2.17303" december="-8.97547" />
+                </Temperatures>
+                <Load>
+                    <PhotoVoltaicUtilized january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <PhotoVoltaicAvailable january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <WindUtilized january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <WindAvailable january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <GrossThermal january="33192.35710" february="26872.19010" march="22652.91065" april="14090.66634" may="8102.32478" june="4052.21643" july="2650.04793" august="3515.59029" september="7699.94923" october="13772.49235" november="22678.16484" december="30853.65878" />
+                    <Basement>
+                        <Heating january="7779.72929" february="6453.14749" march="5578.72597" april="3414.09653" may="1695.69285" june="542.44252" july="195.08108" august="344.44173" september="1318.32800" october="2969.48506" november="5170.44009" december="7121.95061" />
+                        <Cooling january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    </Basement>
+                </Load>
+                <HeatLoss>
+                    <Ceiling january="1451.15169" february="1172.55283" march="1007.97221" april="615.59320" may="332.86495" june="135.52958" july="59.46647" august="111.36872" september="346.05830" october="635.23592" november="1033.60501" december="1360.74155" />
+                    <MainWalls january="11725.55393" february="9472.30850" march="8026.45727" april="4989.91071" may="2724.42225" june="1166.73515" july="577.32664" august="986.91716" september="2787.88110" october="5096.51393" november="8356.60673" december="11062.56099" />
+                    <Doors january="520.05029" february="425.72043" march="370.22872" april="235.34271" may="139.51605" june="72.41358" july="48.41310" august="64.38786" september="138.21125" october="235.19874" november="373.34941" december="489.28306" />
+                    <ExposedFloors january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <Crawlspace january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <Slab january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                    <Basement>
+                        <AboveGrade january="5073.96985" february="4140.67608" march="3567.64253" april="2211.83362" may="1229.57090" june="565.65670" july="343.76420" august="492.06829" september="1231.74865" october="2208.17732" november="3604.41109" december="4764.73138" />
+                        <BelowGrade january="3388.64125" february="3001.07607" march="2936.99311" april="2244.25672" may="1674.00850" june="1178.90074" july="1044.21831" august="1070.83287" september="1247.69639" october="1863.97464" november="2463.65961" december="3104.73674" />
+                        <AboveGradeWall january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                        <FloorHeaders january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                        <PonyWall january="0.00000" february="0.00000" march="0.00000" april="0.00000" may="0.00000" june="0.00000" july="0.00000" august="0.00000" september="0.00000" october="0.00000" november="0.00000" december="0.00000" />
+                        <FloorsAbove january="532.55654" february="463.72914" march="477.37935" april="442.28492" may="464.70481" june="422.18343" july="369.56014" august="402.24765" september="423.12462" october="447.01354" november="470.68918" december="522.54850" />
+                        <AirLeakageAndMechanicalVentilation january="7526.73885" february="5789.59034" march="4247.48368" april="2207.01649" may="1061.30644" june="444.75838" july="250.45098" august="355.90364" september="1016.51480" october="2147.64898" november="4329.35919" december="6772.79410" />
+                    </Basement>
+                </HeatLoss>
+                <Factors>
+                    <MainFloors>
+                        <SolarUtilization january="1.00000" february="0.99820" march="0.93832" april="0.88191" may="0.67559" june="0.28519" july="0.07443" august="0.20401" september="0.76089" october="0.95022" november="1.00000" december="1.00000" />
+                        <GainLoadRatio january="0.06447" february="0.10303" march="0.18664" april="0.29266" may="0.71175" june="2.88217" july="12.67031" august="4.35952" september="0.57744" october="0.21756" november="0.09091" december="0.05795" />
+                        <MassGainRatio january="3.38625" february="2.41949" march="1.85554" april="2.05497" may="1.94707" june="1.88032" july="1.80437" august="1.92869" september="2.29144" october="2.85266" november="3.55866" december="4.07187" />
+                        <InternalGainsUtilization january="17.32217" february="18.11267" march="22.79352" april="22.45105" may="21.41621" june="18.52748" july="18.09579" august="17.37859" september="19.00277" october="21.59798" november="22.34540" december="17.23307" />
+                    </MainFloors>
+                    <Basement>
+                        <SolarUtilization january="1.00000" february="1.00000" march="1.00000" april="1.00000" may="1.00000" june="1.00000" july="1.00000" august="1.00000" september="1.00000" october="1.00000" november="1.00000" december="1.00000" />
+                        <GainLoadRatio january="0.00212" february="0.00375" march="0.00728" april="0.00852" may="0.02317" june="0.08435" july="0.16706" august="0.09535" september="0.01872" october="0.00552" november="0.00313" december="0.00184" />
+                        <MassGainRatio january="115.29554" february="70.87567" march="46.97468" april="64.42651" may="51.19780" june="44.92429" july="47.76894" august="60.08776" september="81.42918" october="119.68605" november="114.54747" december="145.32072" />
+                    </Basement>
+                </Factors>
+                <AirChangeRate>
+                    <Natural january="0.59694" february="0.55662" march="0.46558" april="0.36390" may="0.27492" june="0.21088" july="0.16802" august="0.17859" september="0.26660" october="0.35617" november="0.47198" december="0.57050" />
+                    <Total january="0.61923" february="0.57891" march="0.48787" april="0.38619" may="0.29721" june="0.23317" july="0.19031" august="0.20088" september="0.28889" october="0.37846" november="0.49427" december="0.59279" />
+                </AirChangeRate>
+            </Monthly>
+            <Other designHeatLossRate="21776.003906250" designCoolLossRate="4854.102050781" seasonalHeatEfficiency="93.006807566">
+                <Ventilation roomCountCapacity="50.000000000" noLimitCapacity="50.000000000" minimumAirChangeRate="0.472296506" equivalentLeakageArea="0.138603369" />
+                <FanEnergyConsumption>
+                    <Hrv heatingHours="0.000000000" neitherHours="0.000000000" coolingHours="0.000000000" />
+                    <Heating heatingHours="2.683020508" neitherHours="0.000000000" coolingHours="0.000000000" />
+                    <AirConditioning heatingHours="0.000000000" neitherHours="0.000000000" coolingHours="0.000000000" />
+                    <HrvOrExhaust heatingHours="0.000000000" neitherHours="0.000000000" coolingHours="0.000000000" total="0.000000000" />
+                    <SpaceHeating heatingHours="2.683018483" neitherHours="0.000000000" coolingHours="0.000000000" total="2.683018483" />
+                    <SpaceCooling heatingHours="0.000000000" neitherHours="0.000000000" coolingHours="0.000000000" total="0.000000000" />
+                </FanEnergyConsumption>
+                <GrossArea ceiling="58.064388275" doors="3.303219318" exposedFloors="0.000000000" slab="0.000000000" ponyWall="0.000000000" buildingSurfaceArea="306.866119385" houseVolumeWithoutCrawlspace="381.116577148">
+                    <MainFloors mainWalls="139.919372559">
+                        <Windows>
+                            <South grossArea="2.562576056" rsiValue="0.361155659" />
+                            <SouthEast grossArea="0.000000000" rsiValue="0.000000000" />
+                            <East grossArea="6.005150318" rsiValue="0.313313484" />
+                            <NorthEast grossArea="0.000000000" rsiValue="0.000000000" />
+                            <North grossArea="0.000000000" rsiValue="0.000000000" />
+                            <NorthWest grossArea="0.000000000" rsiValue="0.000000000" />
+                            <West grossArea="4.330315113" rsiValue="0.359120578" />
+                            <SouthWest grossArea="0.000000000" rsiValue="0.000000000" />
+                        </Windows>
+                        <Door grossArea="3.303219318" rsiValue="0.581073344" />
+                    </MainFloors>
+                    <Basement aboveGrade="17.094158173" belowGrade="36.325088501" floorSlab="49.052806854" floorHeader="6.410309792" floorsAbove="49.052806854">
+                        <Windows>
+                            <South grossArea="0.000000000" rsiValue="0.000000000" />
+                            <SouthEast grossArea="0.000000000" rsiValue="0.000000000" />
+                            <East grossArea="0.000000000" rsiValue="0.000000000" />
+                            <NorthEast grossArea="0.000000000" rsiValue="0.000000000" />
+                            <North grossArea="0.418063760" rsiValue="0.363905013" />
+                            <NorthWest grossArea="0.000000000" rsiValue="0.000000000" />
+                            <West grossArea="0.000000000" rsiValue="0.000000000" />
+                            <SouthWest grossArea="0.000000000" rsiValue="0.000000000" />
+                        </Windows>
+                        <Door grossArea="0.000000000" rsiValue="0.000000000" />
+                    </Basement>
+                    <Crawlspace wall="0.000000000" floor="0.000000000" floorHeader="0.000000000">
+                        <Windows>
+                            <South grossArea="0.000000000" rsiValue="0.000000000" />
+                            <SouthEast grossArea="0.000000000" rsiValue="0.000000000" />
+                            <East grossArea="0.000000000" rsiValue="0.000000000" />
+                            <NorthEast grossArea="0.000000000" rsiValue="0.000000000" />
+                            <North grossArea="0.000000000" rsiValue="0.000000000" />
+                            <NorthWest grossArea="0.000000000" rsiValue="0.000000000" />
+                            <West grossArea="0.000000000" rsiValue="0.000000000" />
+                            <SouthWest grossArea="0.000000000" rsiValue="0.000000000" />
+                        </Windows>
+                        <Door grossArea="0.000000000" rsiValue="0.000000000" />
+                    </Crawlspace>
+                </GrossArea>
+            </Other>
+        </Results>
+    </AllResults>
+</HouseFile>
