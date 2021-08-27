@@ -19,6 +19,11 @@ Natural Resources Canada developed this library by consolidating data from two s
 
 Summary tables are comma-separated-value (.csv) formatted; source files containing audit data from the EnerGuide program are xml-formatted according to the HOT2000 .h2k schema. 
 
+### License
+
+This work is licensed the Canada - Open Government Licence. For more information, visit: https://open.canada.ca/en/open-government-licence-canada
+
+
 ### Acknowledgements
 
 **Rasoul Asaee** (Natural Resources Canada) led development of this library. This work draws extensively upon methods first demonstrated by **Lucas Swan** (Dalhousie University, see: https://www.researchgate.net/publication/254220736_Hybrid_residential_end-use_energy_and_greenhouse_gas_emissions_model_-_development_and_verification_for_Canada) 
