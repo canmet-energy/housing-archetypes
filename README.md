@@ -32,5 +32,4 @@ Funding for this work was provided by the Natural Resources Canada's Office of E
 
 ### Contacts
 
-- Rasoul Asaee (rasoul.asaee@nrcan-rncan.gc.ca)
 - Alex Ferguson (alex.ferguson@nrcan-rncan.gc.ca)
