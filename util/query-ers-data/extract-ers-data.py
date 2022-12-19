@@ -8,7 +8,7 @@ import json
 from optparse import OptionParser
 
 # Local modules in /housing_archtypes/lib
-sys.path.insert(1, '../lib')
+sys.path.insert(1, '../../lib')
 import pretty as p
 import sql as sql 
 

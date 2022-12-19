@@ -29,6 +29,11 @@ def get_caller(level=2):
   }
   return call_details
 
+def init_log_to_screen():
+  global log_to_screen
+  log_to_screen = False 
+  return 
+
 def log_to_screen_on():
   # Toggles logging to the log screen : ON 
   global log_to_screen 
@@ -76,6 +81,7 @@ def log(msg, caller = None ):
   global log_to_screen
   if ( log_to_screen == False ):
     return 
+    
 
   line=str()
   file = str()

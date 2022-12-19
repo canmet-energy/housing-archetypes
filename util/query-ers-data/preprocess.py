@@ -1,8 +1,19 @@
 #==================================================================================================================================================
 import pandas as pd
 from datetime import datetime
+
+low_memory=False
+
+import dask.dataframe as dd
+import dask.array as da
+import dask.bag as db
+
+
 #==================================================================================================================================================
 ##### Preprocess 'EE.EVALUATIONS.csv'
+
+print("Reading EE-Evaluations\n")
+
 df_evaluation = pd.read_csv('EE.EVALUATIONS.csv')
 
 # Remove extra columns

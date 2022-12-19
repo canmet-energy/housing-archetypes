@@ -3,6 +3,11 @@ import pretty as p
 import pymssql  
 import time as clock 
 import pandas as pd 
+import re
+
+import warnings
+
+
 
 sep = "    "
 def connect(this_server,this_db,this_user,this_pwd):
@@ -32,6 +37,99 @@ def querysql(sqlstring,cxcn):
     p.log ("SQL Query done, [[Lapsed time: "+lapsed+"s]")
     p.fn_end()
     return res 
+
+def return_query_in_chunks(query,csv_target,cxcn):
+
+  query = "SELECT DISTINCT PROGRAMNAME FROM EE.EVALUATIONS" 
+  result = querysql(query,cxcn)
+
+  print(result) 
+
+  return result
+
+def run_query_in_chunks(query,csv_target,cxcn):
+  p.fn_start
+  p.timer_start("query_in_chunks_routine")
+
+  select_range = re.compile('SELECT .* FROM')
+  select_columns = re.compile('')
+  query_count = select_range.sub("SELECT TOP 1 COUNT (*)  FROM",query)
+
+  p.log ("Counting number of rows via query:"+ query_count)
+  count = querysql(query_count,cxcn)
+  p.log ("Query will return "+str(count[0][0])+" rows")
+  
+  p.log("Running query "+query+" in chunks")
+  p.log("writing results to: "+csv_target)
+
+  chunksize  = 1000
+  chunkcount = 0
+  maxchunks  = int(count[0][0]/chunksize)+1 
+
+  cursor = cxcn.cursor()
+  cursor.execute(query)
+  col_names = [i[0] for i in cursor.description]
+
+
+
+  p.log ("Parsing remote table and extracting data")
+  pause_time = 0 
+  pause_now  = 100
+
+  short_run = False
+  return_now = 200
+
+  #ignore by warning about column conversion
+  warnings.filterwarnings("ignore", message="invalid value encountered in cast")
+
+
+  if (short_run):
+    p.log("Short run is active. Run will be stopped after "+str(return_now)+" chunks")
+  for chunk in range(maxchunks):
+
+    p.timer_start("this-chunk")
+    p.timer_stop("this-chunk")
+
+    res = cursor.fetchmany(size=chunksize)
+    start_row = chunk * chunksize  
+    
+    df = pd.DataFrame(res, columns=col_names)
+
+    if  ( chunk == 0 ):
+      df.to_csv(csv_target, mode='w', index=False, header=True)
+    else:              
+      df.to_csv(csv_target, mode='a', index=False, header=False)
+
+    del res 
+    del df       
+
+    interval = p.timer_stop("this-chunk") 
+    status = sep+"Fetched chunk #" + str(chunk)+"/"+str(maxchunks) +", rows "+str(start_row) +"->"+str(start_row+chunksize)+ " / "+str(interval)+" seconds "
+
+    pad_len = p.term_w - len(status) - 10
+    status = status + " "*pad_len
+    p.stream("\r"+status, LE="")
+    pause_time = pause_time + 1
+    
+    if pause_time == pause_now+1:
+      pause_time = 0
+      p.pause(10,"Pausing after chunk #" + str(chunk)+"/"+str(maxchunks) +" to reduce load on SQL server")
+    
+    if (short_run and chunk >= return_now):
+      p.log("Stopping extraction early after "+str(return_now)+" chunks")
+      break
+
+          
+  cursor.close()
+  p.stream("")
+  p.stream(sep+"Table extraction complete. Data saved to: "+csv_target)
+
+
+
+  p.log("Lapsed time query: "+p.timer_stop("query_in_chunks_routine")+" s")
+  p.fn_end()
+  return
+
 
 def get_table_in_chunks(table,columns,csv_target,cxcn): 
     p.fn_start()
@@ -66,39 +164,12 @@ def get_table_in_chunks(table,columns,csv_target,cxcn):
       p.log("Short run is active. Run will be stopped after "+str(return_now)+" chunks")
     for chunk in range(maxchunks):
       p.timer_start("this-chunk")
-      res = cursor.fetchmany(size=chunksize)
-      start_row = chunk * chunksize       
-      df = pd.DataFrame(res, columns=columns) 
-      if  ( chunk == 0 ):
-        df.to_csv(csv_target, mode='w', index=False, header=True)
-      else:              
-        df.to_csv(csv_target, mode='a', index=False, header=False)
-      del res 
-      del df       
-      interval = p.timer_stop("this-chunk") 
-      status = sep+"Fetched chunk #" + str(chunk)+"/"+str(maxchunks) +", rows "+str(start_row) +"->"+str(start_row+chunksize)+ " / "+str(interval)+" seconds "
-      pad_len = p.term_w - len(status) - 10
-      status = status + " "*pad_len
-      p.stream("\r"+status, LE="")
-      pause_time = pause_time + 1
-      
-      if pause_time == pause_now+1:
-        pause_time = 0
-        p.pause(10,"Pausing after chunk #" + str(chunk)+"/"+str(maxchunks) +" to reduce load on SQL server")
-      
-      if (short_run and chunk >= return_now):
-        p.log("Stopping extraction early after "+str(return_now)+" chunks")
-        break
-          
-    cursor.close()
-    p.stream("")
-    p.stream(sep+"Table extraction complete. Data saved to: "+csv_target)
     p.log("Lapsed time for table "+table+": "+p.timer_stop("chunks_routine")+" s")
     p.fn_end()
     return 
 
 
-def run_query_in_chunks(query,cxcn):
+def run_query_in_chunks2(query,cxcn):
 
   p.log_to_screen_on()
   p.fn_start()
@@ -174,13 +245,14 @@ def arr_to_strlist(arr):
 def dic_to_strlist(dic):
 
   p.fn_start()
-  p.log("dic is a :"+str(type(dic)))
-  if (dic["password"] != None ):
+  #p.log("dic is a :"+str(type(dic)))
+
+  if ("password" in dic and dic["password"] != None ):
     dic["password"] = '*******'
   strlist = ""
   first = True 
   for key in dic:
-    p.log ("KEY:"+key)
+    #p.log ("KEY:"+key)
     value = str(dic[key])
     if  not first:
       strlist = strlist + ", "
