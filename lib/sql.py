@@ -32,13 +32,17 @@ def querysql(sqlstring,cxcn):
     p.timer_start("querysql-start")
     cursor = cxcn.cursor()
     cursor.execute(sqlstring)
-    res = cursor.fetchall() 
+    col_names = [i[0] for i in cursor.description]
+    if col_names == ['']:
+      col_names = ['default']
+    data = cursor.fetchall() 
+    result = pd.DataFrame(data, columns=col_names)
     lapsed = p.timer_stop("querysql-start")
     p.log ("SQL Query done, [[Lapsed time: "+lapsed+"s]")
     p.fn_end()
-    return res 
+    return result 
 
-def return_query_in_chunks(query,csv_target,cxcn):
+def BREAKreturn_query_in_chunks(query,csv_target,cxcn):
 
   query = "SELECT DISTINCT PROGRAMNAME FROM EE.EVALUATIONS" 
   result = querysql(query,cxcn)
@@ -47,32 +51,69 @@ def return_query_in_chunks(query,csv_target,cxcn):
 
   return result
 
-def run_query_in_chunks(query,csv_target,cxcn):
-  p.fn_start
-  p.timer_start("query_in_chunks_routine")
+
+def count_rows_to_return(sql,cxcn):
+  p.fn_start()
+  p.timer_start("row-count-routine")
 
   select_range = re.compile('SELECT .* FROM')
-  select_columns = re.compile('')
-  query_count = select_range.sub("SELECT TOP 1 COUNT (*)  FROM",query)
+  #select_columns = re.compile('')
+  query_count = select_range.sub("SELECT TOP 1 COUNT (*)  FROM",sql)
 
   p.log ("Counting number of rows via query:"+ query_count)
-  count = querysql(query_count,cxcn)
-  p.log ("Query will return "+str(count[0][0])+" rows")
+
+  result = querysql(query_count,cxcn)
+
+  row_count = str(result['default'][0])
   
-  p.log("Running query "+query+" in chunks")
-  p.log("writing results to: "+csv_target)
+  p.log ("Query will return "+str(row_count)+" rows")
+  p.fn_end()
+  return row_count
 
-  chunksize  = 1000
+def run_arbitrary_query(query,cxcn):
+  p.fn_start()
+  p.timer_start("arbitray sql query")
+  p.log("Attempting to run supplied sql, writing results to " + query['target'])
+  
+  raw_query = ""
+
+  #print (query["sql"])
+
+  for action in query["sql"]:
+    p.log ("ACTION:" + action)
+    raw_query = raw_query + " " + action + " " +  arr_to_strlist(query["sql"][action])
+
+  p.log("SQL: " + raw_query)
+
+  if (query["page_results"]): 
+    p.log("Paging results")
+    #row_count = count_rows_to_return(raw_query, cxcn)
+
+    run_query_in_chunks(raw_query,query['target'],cxcn)
+    
+  else: 
+    p.log("Returning all results at once.")
+    result = querysql(raw_query,cxcn)
+    result.to_csv(query['target'], mode='w', index=False, header=True)
+
+  p.fn_end()
+
+def run_query_in_chunks(query,csv_target,cxcn):
+  p.fn_start()
+  p.timer_start("run_query_in_chunks")
+  chunksize  = 500
   chunkcount = 0
-  maxchunks  = int(count[0][0]/chunksize)+1 
-
+  row_count = int(count_rows_to_return(query, cxcn))
+  p.log("Query will recover "+str((row_count))+" rows")
+  maxchunks = int(row_count/chunksize)+1 
+  p.log("Starting query")
   cursor = cxcn.cursor()
   cursor.execute(query)
   col_names = [i[0] for i in cursor.description]
-
-
+  
 
   p.log ("Parsing remote table and extracting data")
+
   pause_time = 0 
   pause_now  = 100
 
@@ -82,9 +123,10 @@ def run_query_in_chunks(query,csv_target,cxcn):
   #ignore by warning about column conversion
   warnings.filterwarnings("ignore", message="invalid value encountered in cast")
 
-
   if (short_run):
     p.log("Short run is active. Run will be stopped after "+str(return_now)+" chunks")
+
+  
   for chunk in range(maxchunks):
 
     p.timer_start("this-chunk")
@@ -119,19 +161,16 @@ def run_query_in_chunks(query,csv_target,cxcn):
       p.log("Stopping extraction early after "+str(return_now)+" chunks")
       break
 
-          
   cursor.close()
   p.stream("")
   p.stream(sep+"Table extraction complete. Data saved to: "+csv_target)
 
+  p.log("Lapsed time query: "+p.timer_stop("run_query_in_chunks")+" s")        
 
-
-  p.log("Lapsed time query: "+p.timer_stop("query_in_chunks_routine")+" s")
   p.fn_end()
   return
 
-
-def get_table_in_chunks(table,columns,csv_target,cxcn): 
+def BREAKget_table_in_chunks(table,columns,csv_target,cxcn): 
     p.fn_start()
     p.timer_start("chunks_routine")
     p.log("Column variable is a "+str(type(columns)))
@@ -143,7 +182,7 @@ def get_table_in_chunks(table,columns,csv_target,cxcn):
 
     chunksize  = 500
     chunkcount = 0
-    
+
     p.log("Counting rows in table "+ table )
     row_count  = querysql('SELECT TOP 1 COUNT(*) FROM '+table,cxcn)
     
@@ -155,6 +194,7 @@ def get_table_in_chunks(table,columns,csv_target,cxcn):
     cursor = cxcn.cursor()
     cursor.execute(sqlstring)
     p.log ("Parsing remote table "+table+" and extracting data")
+    #p.log ("SQL String" + sqlstring )
     pause_time = 0 
     pause_now  = 100
 
@@ -169,7 +209,7 @@ def get_table_in_chunks(table,columns,csv_target,cxcn):
     return 
 
 
-def run_query_in_chunks2(query,cxcn):
+def BREAKrun_query_in_chunks2(query,cxcn):
 
   p.log_to_screen_on()
   p.fn_start()

@@ -112,10 +112,10 @@ column_list = sql.arr_to_strlist(columns)
 
 
 #p.stream(" -> Extracting " +str(len(columns))+" cols from table "+table+" where " + criteria )
-query = "SELECT TOP 1 COUNT (*)  FROM " + table  + " WHERE " + criteria
+query = "SELECT TOP 1 COUNT (*)  FROM " + table  # + " WHERE " + criteria+ " WHERE " + criteria
 count = sql.querysql(query,cxcn)
 p.stream("    Query will return "+str(count[0][0])+" rows.")
-query = "SELECT " + column_list + " FROM " + table  + " WHERE " + criteria
+query = "SELECT " + column_list + " FROM " + table  # + " WHERE " + criteria
 sql.run_query_in_chunks(query,csv_target,cxcn)
 
 

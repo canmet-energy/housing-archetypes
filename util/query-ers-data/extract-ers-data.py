@@ -12,6 +12,9 @@ sys.path.insert(1, '../../lib')
 import pretty as p
 import sql as sql 
 
+
+
+
 # Toggle screen logging
 log_to_screen = False  
 
@@ -77,6 +80,7 @@ for table in table_definitions:
   interval = p.timer_stop(table+"-extract")
   p.stream("    "+table+" extraction complete ("+interval+"s)")
   p.log("Extraction of "+table+" complete [Lapsed time: "+interval+"s]")
+  
   p.pause(20,"Connection closed. Pause to reduce load on SQL server")
 
   print("")

@@ -4,7 +4,9 @@ from colorama import Fore
 import time as clock
 from inspect import getframeinfo, stack
 import re 
+import pprint 
 from os import get_terminal_size
+
 
 timers=dict()
 term_w = int(get_terminal_size().columns) 
@@ -37,7 +39,7 @@ def init_log_to_screen():
 def log_to_screen_on():
   # Toggles logging to the log screen : ON 
   global log_to_screen 
-  log_to_screen= True 
+  log_to_screen = True 
   caller = get_caller()
   log("Log to screen turned on by "+caller["func"]+ " / "+caller["file"]+":"+caller["line"])
   return
@@ -45,9 +47,10 @@ def log_to_screen_on():
 def log_to_screen_off():
   # Toggles log messages to screen : OFF
   global log_to_screen 
+  log_to_screen = False 
   caller = get_caller()
   log("Log to screen turned on by "+caller["func"]+ " / "+caller["file"]+":"+caller["line"])
-  log_to_screen = False 
+  
   return
 
 def header(text):
@@ -75,10 +78,20 @@ def fn_end():
   log(msg, caller)
   return   
 
+def print_object(object):
+  fn_start()
+  c = get_caller()  
+  obj_type = str(type(object))
+  printer = pprint.PrettyPrinter(indent=4)
+  txt = "{"+obj_type+"} "+printer.pformat(object)
+  fn_end()
+  return txt 
+  
+
 def log(msg, caller = None ):
   # General purpose logging function. Currently 
   # supports formatted log messages to screen. 
-  global log_to_screen
+  #global log_to_screen
   if ( log_to_screen == False ):
     return 
     
