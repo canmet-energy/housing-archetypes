@@ -71,17 +71,22 @@ def count_rows_to_return(sql,cxcn):
   return row_count
 
 def run_arbitrary_query(query,cxcn):
+  
   p.fn_start()
   p.timer_start("arbitray sql query")
   p.log("Attempting to run supplied sql, writing results to " + query['target'])
   
   raw_query = ""
 
-  #print (query["sql"])
-
   for action in query["sql"]:
     p.log ("ACTION:" + action)
     raw_query = raw_query + " " + action + " " +  arr_to_strlist(query["sql"][action])
+  p.log("SQL: " + raw_query)
+
+
+  if ("references" in query.keys()):  
+    for ref in query["references"]:
+      raw_query = re.sub(ref,arr_to_strlist(query["references"][ref]),raw_query)    
 
   p.log("SQL: " + raw_query)
 

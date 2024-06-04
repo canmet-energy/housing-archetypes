@@ -126,6 +126,16 @@ def stream(msg, LE="\n"):
   print (txt, end=LE)
   return
 
+
+def stop_here(msg):
+  # Simple function to stop execution and log a message
+  # to the screen.  
+  log(msg)
+  sys.exit(1)
+
+
+
+
 def pause(interval,msg):
   global sep 
   for secs in range(interval):
