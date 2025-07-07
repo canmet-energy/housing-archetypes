@@ -1,5 +1,6 @@
 # NRCan Housing Archetypes for Energy Analysis
 This repository contains a library of archetypes representing low-rise Canadian residential buildings. The archetypes are intended to support energy analysis, but may prove useful for other applications. 
+Proposed naming convention for these archetypes "Statistically Representative Existing Canadian Low-Rise Housing Archetypes, 2019"
 
 ### Contents
 
